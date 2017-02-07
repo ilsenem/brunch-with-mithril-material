@@ -1,10 +1,17 @@
-# Brunch + Babel/ES6
+# Brunch + Babel/ES6 + Mithril + Material Design Lite
 
-This is a modern JS skeleton for [Brunch](http://brunch.io).
+This is a modern JS skeleton for [Brunch](http://brunch.io) with [Mithril](http://mithril.js.org) and [Material Design Lite](https://getmdl.io) included.
+
+## What is included
+
+* JSX transpilation
+* ESLint linting
+* Mithril and Material Design Lite (with font and icons)
 
 ## Installation
 
-Clone this repo manually or use `brunch new dir -s brunch/with-es6`
+Clone this repo manually or use `brunch new <dir> -s ilsenem/brunch-with-mithril-material`
+or simply with `brunch new <dir> -s mithril-mdl`.
 
 ## Getting started
 
@@ -25,4 +32,4 @@ Clone this repo manually or use `brunch new dir -s brunch/with-es6`
 To use proposed JS features not included into ES6, do this:
 
 * `npm install --save-dev babel-preset-stage-0`
-* in `brunch-config.js`, add the preset: `presets: ['es2015', 'stage-0']`
+* in `.babelrc`, add the preset: `"presets": ["es2015", "stage-0"]`

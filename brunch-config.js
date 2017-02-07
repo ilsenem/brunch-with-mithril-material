@@ -3,13 +3,32 @@ module.exports = {
     javascripts: {
       joinTo: {
         'vendor.js': /^(?!app)/,
-        'app.js': /^app/
-      }
+        'app.js': /^app/,
+      },
     },
-    stylesheets: {joinTo: 'app.css'}
+    stylesheets: {
+      joinTo: {
+        'app.css': /^app/,
+        'vendor.css': /^(?!app)/,
+      },
+    },
   },
-
+  npm: {
+    styles: {
+      'material-design-lite': [
+        'dist/material.min.css',
+      ],
+    },
+  },
+  modules: {
+    autoRequire: {
+      'app.js': ['index'],
+    },
+  },
   plugins: {
-    babel: {presets: ['es2015']}
-  }
+    eslint: {
+      pattern: /^app\/.*\.js?$/,
+      warnOnly: true,
+    },
+  },
 };
